@@ -115,20 +115,20 @@ html.mb-menu-open .mb-close{display:flex;align-self:flex-end;align-items:center;
     </div>
     <div style="overflow-x:auto">
       <div style="min-width:620px;padding:var(--space-3);display:flex;flex-direction:column;gap:2px">
-        <div style="display:grid;grid-template-columns:64px minmax(150px,1fr) repeat(6,62px);gap:2px;font-weight:900;font-size:15px;padding-bottom:2px">
-          <span></span><span></span>
-          <span style="grid-column:span 2;padding-left:var(--space-2)">1</span>
-          <span style="grid-column:span 2;padding-left:var(--space-2)">X</span>
-          <span style="grid-column:span 2;padding-left:var(--space-2)">2</span>
-        </div>
-        <div style="display:grid;grid-template-columns:64px minmax(150px,1fr) repeat(6,62px);gap:2px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding-bottom:var(--space-1)">
-          <span></span><span></span>
-          <span style="padding-left:var(--space-2)">Back</span><span style="padding-left:var(--space-2);color:var(--color-accent-700)">Lay</span>
-          <span style="padding-left:var(--space-2)">Back</span><span style="padding-left:var(--space-2);color:var(--color-accent-700)">Lay</span>
-          <span style="padding-left:var(--space-2)">Back</span><span style="padding-left:var(--space-2);color:var(--color-accent-700)">Lay</span>
+        <div style="display:grid;grid-template-columns:64px minmax(150px,2fr) repeat(6,minmax(62px,1fr));gap:2px;padding-bottom:var(--space-1);align-items:end">
+          <div style="grid-column:1 / span 2;grid-row:1 / span 2;display:flex;flex-direction:column;gap:4px;padding-right:var(--space-3);min-width:0">
+            <span style="display:flex;align-items:center;gap:6px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--color-accent-700)">{{ liveDot }}En direct · 4 matchs · 1X2</span>
+            <span style="font-size:12px;color:var(--color-neutral-700)">Volume échangé <strong style="color:var(--color-text);font-size:15px;font-weight:900;font-variant-numeric:tabular-nums">{{ totalVol }}</strong></span>
+          </div>
+          <span style="grid-row:1;grid-column:3 / span 2;font-weight:900;font-size:15px;padding-left:var(--space-2)">1</span>
+          <span style="grid-row:1;grid-column:5 / span 2;font-weight:900;font-size:15px;padding-left:var(--space-2)">X</span>
+          <span style="grid-row:1;grid-column:7 / span 2;font-weight:900;font-size:15px;padding-left:var(--space-2)">2</span>
+          <span style="grid-row:2;grid-column:3;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding-left:var(--space-2)">Back</span><span style="grid-row:2;grid-column:4;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding-left:var(--space-2);color:var(--color-accent-700)">Lay</span>
+          <span style="grid-row:2;grid-column:5;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding-left:var(--space-2)">Back</span><span style="grid-row:2;grid-column:6;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding-left:var(--space-2);color:var(--color-accent-700)">Lay</span>
+          <span style="grid-row:2;grid-column:7;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding-left:var(--space-2)">Back</span><span style="grid-row:2;grid-column:8;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding-left:var(--space-2);color:var(--color-accent-700)">Lay</span>
         </div>
         <sc-for list="{{ rows }}" as="r" hint-placeholder-count="6">
-          <div onClick="{{ r.select }}" style="display:grid;grid-template-columns:64px minmax(150px,1fr) repeat(6,62px);gap:2px;cursor:pointer;padding:2px;margin:0 -2px;background:{{ r.bg }};transition:background .3s">
+          <div onClick="{{ r.select }}" style="display:grid;grid-template-columns:64px minmax(150px,2fr) repeat(6,minmax(62px,1fr));gap:2px;cursor:pointer;padding:2px;margin:0 -2px;background:{{ r.bg }};transition:background .3s">
             <div style="background:var(--color-surface);display:flex;flex-direction:column;justify-content:center;padding:var(--space-2);line-height:1.15"><span style="font-weight:900;font-size:13px">{{ r.day }}</span><span style="font-size:13px">{{ r.time }}</span></div>
             <div style="display:flex;flex-direction:column;justify-content:center;padding:var(--space-1) var(--space-3);line-height:1.2;min-width:0">
               <span style="font-weight:800;font-size:15px">{{ r.home }}</span>
@@ -422,6 +422,7 @@ class Component extends DCLogic {
     const depth = [0, 1, 2, 3].map(k => ({ bp: this.fp(this.dn(bp, k)), lp: this.fp(this.up(lp, k)), ba: this.fa(bA[k]), la: this.fa(lA[k]), bw: (bA[k] / mxA * 100).toFixed(1) + '%', lw: (lA[k] / mxA * 100).toFixed(1) + '%' }));
     return {
       loader, liveDot, rows, depth,
+      totalVol: this.fa(this.M.reduce((a, x) => a + x.vol, 0)),
       ctaDot: h('span', { style: { width: 12, height: 12, borderRadius: '50%', background: '#ec3013', boxShadow: '0 0 0 2px #fff', display: 'inline-block', flex: '0 0 12px', animation: 'mbPulse 1s ease-in-out infinite' } }),
       showToc: this.props.showToc ?? true,
       selTitle: m.home + ' – ' + m.away, selLeague: m.league + ' · ' + m.day + ' ' + m.time,
