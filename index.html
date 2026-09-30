@@ -43,7 +43,9 @@ summary::-webkit-details-marker{display:none}
 }
 .mb-burger,.mb-close{display:none}
 @media (min-width:821px){.mb-header{padding:0 calc(max(0px,(100% - 1320px) / 2) + var(--space-6))}.mb-header .mb-cta{padding-right:0!important}}
-@media (min-width:821px){h1{--mb-l2:28.2px!important}}
+.mb-hero-kpis{display:none!important}
+@media (min-width:821px){h1{--mb-l2:28.2px!important}.mb-hero-kpis{display:flex!important}}
+@container (max-width:640px){.mb-hero-kpis{display:none!important}}
 @media (max-width:820px){
 .mb-header .mb-burger{display:flex;order:3;align-items:center;justify-content:flex-end;flex:0 0 auto;min-height:64px;padding:0 var(--space-4) 0 0;margin:0;background:transparent;border:0;color:var(--color-bg);cursor:pointer}
 html.mb-menu-open body{overflow:hidden}
@@ -113,7 +115,7 @@ html.mb-menu-open .mb-close{display:flex;align-self:flex-end;align-items:center;
 
 <main class="mb-main" style="flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:72px">
 
-  <div style="margin-bottom:-40px;container-type:inline-size"><h1 style="--mb-l2:min(5.85cqi,50px);margin:-.12em 0 0;font-family:var(--font-heading);font-weight:900;font-size:calc(var(--mb-l2) * 1.384);line-height:1;letter-spacing:-.03em;white-space:nowrap">Matchbook France <span style="display:block;font-size:var(--mb-l2);line-height:1.05;color:var(--color-accent)">Exchange de Paris Sportifs</span></h1></div>
+  <div class="mb-hero" style="margin-bottom:-40px;container-type:inline-size;display:flex;align-items:stretch;gap:var(--space-6)"><h1 style="--mb-l2:8.1cqi;margin:-.12em 0 0;font-family:var(--font-heading);font-weight:900;font-size:calc(var(--mb-l2) * 1.384);line-height:1;letter-spacing:-.03em;white-space:nowrap">Matchbook France <span style="display:block;font-size:var(--mb-l2);line-height:1.05;color:var(--color-accent)">Exchange de Paris Sportifs</span></h1><div class="mb-hero-kpis" aria-label="Matchbook en chiffres" style="flex:1 1 auto;display:flex;gap:2px;background:var(--color-text);border:2px solid var(--color-text)"><div style="flex:1 1 0;background:#fff;display:flex;flex-direction:column;justify-content:center;gap:2px;padding:0 var(--space-4);min-width:0"><span style="font-family:var(--font-heading);font-weight:900;font-size:26px;line-height:1;letter-spacing:-.02em;color:var(--color-accent);white-space:nowrap">2 %</span><span style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;line-height:1.2;color:var(--color-neutral-700)">commission sur gains</span></div><div style="flex:1 1 0;background:#fff;display:flex;flex-direction:column;justify-content:center;gap:2px;padding:0 var(--space-4);min-width:0"><span style="font-family:var(--font-heading);font-weight:900;font-size:26px;line-height:1;letter-spacing:-.02em;color:var(--color-text);white-space:nowrap">12 h</span><span style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;line-height:1.2;color:var(--color-neutral-700)">délai de retrait</span></div><div style="flex:1 1 0;background:#fff;display:flex;flex-direction:column;justify-content:center;gap:2px;padding:0 var(--space-4);min-width:0"><span style="font-family:var(--font-heading);font-weight:900;font-size:26px;line-height:1;letter-spacing:-.02em;color:var(--color-text);white-space:nowrap">10 €</span><span style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;line-height:1.2;color:var(--color-neutral-700)">dépôt minimum</span></div></div></div>
   <section id="simulateur" style="display:flex;flex-direction:column;border:2px solid var(--color-text);background:#fff">
     <div style="background:var(--color-text);color:var(--color-bg);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:var(--space-3);padding:var(--space-3) var(--space-4)">
       <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:22px;font-weight:900;line-height:1">Football</span></div>
