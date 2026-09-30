@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/modernist-9ef714be-cc31-4107-993f-54b90aea6d7f/styles.css">
+<script src="_ds/modernist-9ef714be-cc31-4107-993f-54b90aea6d7f/_ds_bundle.js"></script>
+<style>
+body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body)}
+a{color:var(--color-accent-700);text-decoration:none}
+a:hover{color:var(--color-accent);text-decoration:underline}
+html{scroll-behavior:smooth}
+summary::-webkit-details-marker{display:none}
+@media (max-width:820px){aside{display:none!important}}
+</style>
+</helmet>
+
+<header style="background:var(--color-text);color:var(--color-bg);display:flex;align-items:stretch;flex-wrap:wrap;border-bottom:2px solid var(--color-accent)">
+  <a href="#top" style="background:var(--color-accent);color:#fff;display:flex;align-items:center;padding:0 var(--space-6);font-weight:900;font-size:28px;letter-spacing:-1px;text-decoration:none;min-height:64px">M</a>
+  <nav style="display:flex;align-items:center;gap:var(--space-6);padding:0 var(--space-6);font-size:14px;font-weight:700;flex:1;flex-wrap:wrap">
+    <a href="#fonctionnement" style="color:var(--color-bg)">Exchange</a>
+    <a href="#back-lay" style="color:var(--color-bg)">Back &amp; Lay</a>
+    <a href="#commissions" style="color:var(--color-bg)">Commissions</a>
+    <a href="#sports" style="color:var(--color-bg)">Sports</a>
+    <a href="#paiements" style="color:var(--color-bg)">Paiements</a>
+    <a href="#faq" style="color:var(--color-bg)">FAQ</a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:var(--space-2);padding:var(--space-3) var(--space-6)">
+    <a href="#inscription" class="btn btn-primary" style="color:#fff;text-decoration:none">S’inscrire</a>
+  </div>
+</header>
+
+<div id="top" style="max-width:1320px;margin:0 auto;padding:var(--space-8) var(--space-6);display:flex;gap:var(--space-6);align-items:flex-start;flex-wrap:wrap">
+
+<sc-if value="{{ showToc }}" hint-placeholder-val="{{ true }}">
+<aside data-toc="1" style="flex:0 0 220px;position:sticky;top:var(--space-6);border-top:2px solid var(--color-text)">
+  <div style="font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:var(--space-3) 0;border-bottom:2px solid var(--color-divider)">Sommaire</div>
+  <nav style="display:flex;flex-direction:column;font-size:14px;font-weight:600">
+    <a href="#fonctionnement" style="color:var(--color-text);padding:var(--space-2) 0;border-bottom:1px solid var(--color-divider)">Fonctionnement</a>
+    <a href="#france" style="color:var(--color-text);padding:var(--space-2) 0;border-bottom:1px solid var(--color-divider)">Parieurs français</a>
+    <a href="#commissions" style="color:var(--color-text);padding:var(--space-2) 0;border-bottom:1px solid var(--color-divider)">Commissions et frais</a>
+    <a href="#sports" style="color:var(--color-text);padding:var(--space-2) 0;border-bottom:1px solid var(--color-divider)">Sports et marchés</a>
+    <a href="#inscription" style="color:var(--color-text);padding:var(--space-2) 0;border-bottom:1px solid var(--color-divider)">Inscription</a>
+    <a href="#paiements" style="color:var(--color-text);padding:var(--space-2) 0;border-bottom:1px solid var(--color-divider)">Dépôts et retraits</a>
+    <a href="#presentation" style="color:var(--color-text);padding:var(--space-2) 0;border-bottom:1px solid var(--color-divider)">Présentation</a>
+    <a href="#back-lay" style="color:var(--color-text);padding:var(--space-2) 0;border-bottom:1px solid var(--color-divider)">Guide Back et Lay</a>
+    <a href="#mobile" style="color:var(--color-text);padding:var(--space-2) 0;border-bottom:1px solid var(--color-divider)">Mobile</a>
+    <a href="#securite" style="color:var(--color-text);padding:var(--space-2) 0;border-bottom:1px solid var(--color-divider)">Sécurité</a>
+    <a href="#bonus" style="color:var(--color-text);padding:var(--space-2) 0;border-bottom:1px solid var(--color-divider)">Bonus</a>
+    <a href="#faq" style="color:var(--color-text);padding:var(--space-2) 0;border-bottom:1px solid var(--color-divider)">FAQ</a>
+    <a href="#jeu-responsable" style="color:var(--color-text);padding:var(--space-2) 0;border-bottom:1px solid var(--color-divider)">Jeu responsable</a>
+  </nav>
+</aside>
+</sc-if>
+
+<main style="flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:var(--space-8)">
+
+  <div style="border-top:2px solid var(--color-text);padding-top:var(--space-6);display:flex;flex-direction:column;gap:var(--space-4)">
+    <span style="font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--color-accent-700)">Guide Betting Exchange</span>
+    <h1 style="margin:0;font-family:var(--font-heading);font-weight:900;font-size:clamp(34px,5vw,60px);line-height:1;letter-spacing:-.02em;text-wrap:balance">Matchbook Betting Exchange : Paris Sportifs en Ligne</h1>
+    <p style="margin:0;font-size:18px;line-height:1.55;max-width:680px;text-wrap:pretty">Matchbook est une bourse de paris : les parieurs y échangent des paris entre eux au lieu de jouer contre un bookmaker. Ce guide explique le fonctionnement de l’exchange, les commissions, les marchés disponibles et les points à vérifier avant de s’inscrire depuis la France.</p>
+  </div>
+
+  <sc-if value="{{ showMarket }}" hint-placeholder-val="{{ true }}">
+  <div style="border:2px solid var(--color-text);background:#fff">
+    <div style="background:var(--color-text);color:var(--color-bg);display:grid;grid-template-columns:minmax(0,1fr) 88px 88px;gap:2px;padding:var(--space-3) var(--space-4);align-items:end">
+      <div><div style="font-weight:800">Football · Exemple de marché</div><div style="font-size:12px;opacity:.8">Illustration : cotes et liquidités fictives</div></div>
+      <div style="font-size:12px;font-weight:800;text-transform:uppercase">Back</div>
+      <div style="font-size:12px;font-weight:800;text-transform:uppercase">Lay</div>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,1fr) 88px 88px;gap:2px;padding:var(--space-2) var(--space-4);align-items:center;border-bottom:1px solid var(--color-divider)">
+      <div style="font-weight:700">Équipe A</div>
+      <div style="background:var(--color-neutral-200);padding:var(--space-2);font-weight:800">2,10<div style="font-size:11px;font-weight:500">1 240 €</div></div>
+      <div style="background:var(--color-accent-200);padding:var(--space-2);font-weight:800">2,14<div style="font-size:11px;font-weight:500">860 €</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,1fr) 88px 88px;gap:2px;padding:var(--space-2) var(--space-4);align-items:center;border-bottom:1px solid var(--color-divider)">
+      <div style="font-weight:700">Match nul</div>
+      <div style="background:var(--color-neutral-200);padding:var(--space-2);font-weight:800">3,45<div style="font-size:11px;font-weight:500">410 €</div></div>
+      <div style="background:var(--color-accent-200);padding:var(--space-2);font-weight:800">3,55<div style="font-size:11px;font-weight:500">295 €</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,1fr) 88px 88px;gap:2px;padding:var(--space-2) var(--space-4);align-items:center">
+      <div style="font-weight:700">Équipe B</div>
+      <div style="background:var(--color-neutral-200);padding:var(--space-2);font-weight:800">3,80<div style="font-size:11px;font-weight:500">530 €</div></div>
+      <div style="background:var(--color-accent-200);padding:var(--space-2);font-weight:800">3,90<div style="font-size:11px;font-weight:500">375 €</div></div>
+    </div>
+  </div>
+  </sc-if>
+
+  <section id="fonctionnement" style="display:flex;flex-direction:column">
+    <h2 style="margin:0;background:var(--color-text);color:var(--color-bg);padding:var(--space-4);font-family:var(--font-heading);font-weight:800;font-size:24px;line-height:1.15">Comment Fonctionne le Betting Exchange de Matchbook</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));border-left:2px solid var(--color-text);border-bottom:2px solid var(--color-text)">
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Principe du betting exchange</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Un exchange met en relation des parieurs aux avis opposés. L’un parie qu’un résultat se produira, l’autre qu’il ne se produira pas. Matchbook fournit la plateforme, fait correspondre les ordres et prélève une commission.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Paris Back et Lay</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Un pari Back mise sur la réalisation d’un résultat. Un pari Lay mise contre ce résultat : le parieur joue alors le rôle du bookmaker et paie le gain du parieur Back si le résultat se produit.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Différence avec un bookmaker traditionnel</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Un bookmaker fixe ses cotes et intègre sa marge dans chacune d’elles. Sur Matchbook, les cotes viennent de l’offre et de la demande des utilisateurs, et le coût du service prend la forme d’une commission sur les gains.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Trouver et placer un pari</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Choisissez un sport, puis un événement et un marché. Cliquez sur une cote Back ou Lay, saisissez la mise et validez. Si aucune contrepartie n’est disponible à votre cote, le pari reste en attente jusqu’à ce qu’il soit apparié ou annulé.</p></div>
+    </div>
+  </section>
+
+  <section id="france" style="display:flex;flex-direction:column">
+    <h2 style="margin:0;background:var(--color-text);color:var(--color-bg);padding:var(--space-4);font-family:var(--font-heading);font-weight:800;font-size:24px;line-height:1.15">Matchbook Betting pour les Parieurs Français</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));border-left:2px solid var(--color-text);border-bottom:2px solid var(--color-text)">
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Accès depuis la France</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">En France, seuls les opérateurs agréés par l’Autorité nationale des jeux (ANJ) peuvent proposer des paris sportifs en ligne. Vérifiez sur le site de l’ANJ si Matchbook figure dans la liste des opérateurs agréés avant toute inscription.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Conditions d’utilisation</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Il faut être majeur, résider dans un pays accepté et ne détenir qu’un seul compte. Les conditions générales précisent aussi les règles de marché, de règlement des paris et d’annulation.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Disponibilité selon le pays</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Matchbook opère sous différentes licences selon les marchés. Les sports, promotions et moyens de paiement proposés varient d’un pays à l’autre, et certains pays sont exclus.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Création et gestion du compte</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">L’espace compte regroupe le solde, l’historique des paris, les dépôts et retraits, ainsi que les outils de limites. Les informations personnelles doivent rester à jour pour éviter tout blocage lors d’un retrait.</p></div>
+    </div>
+  </section>
+
+  <section id="commissions" style="display:flex;flex-direction:column">
+    <h2 style="margin:0;background:var(--color-text);color:var(--color-bg);padding:var(--space-4);font-family:var(--font-heading);font-weight:800;font-size:24px;line-height:1.15">Les Commissions et Frais sur Matchbook</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));border-left:2px solid var(--color-text)">
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Fonctionnement de la commission</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Matchbook ne prend pas de marge sur les cotes. Il prélève un pourcentage sur les gains nets d’un marché. Le taux dépend du sport et du compte : consultez le barème en vigueur sur le site.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Commission sur les gains</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">La commission s’applique au bénéfice net réalisé sur un marché, après compensation des paris gagnants et perdants. Un pari perdant ne génère pas de commission.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Différence avec la marge d’un bookmaker</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Chez un bookmaker, la marge est cachée dans chaque cote, que vous gagniez ou non. Sur un exchange, le coût est visible et n’est payé qu’en cas de gain net.</p></div>
+    </div>
+    <div style="border:2px solid var(--color-text);border-top:2px solid var(--color-text);background:#fff;padding:var(--space-4);display:flex;flex-direction:column;gap:var(--space-3)">
+      <h3 style="margin:0;font-size:17px;font-weight:800">Exemples simples pour comprendre les frais</h3>
+      <table class="table" style="width:100%">
+        <thead><tr><th>Situation</th><th>Gain net</th><th>Commission (taux de 2 % pris pour l’exemple)</th><th>Gain après frais</th></tr></thead>
+        <tbody>
+          <tr><td>Back 10 € à 3,00, pari gagnant</td><td>20,00 €</td><td>0,40 €</td><td>19,60 €</td></tr>
+          <tr><td>Back 10 € à 3,00, pari perdant</td><td>−10,00 €</td><td>0,00 €</td><td>−10,00 €</td></tr>
+          <tr><td>Lay 10 € à 3,00, résultat non réalisé</td><td>10,00 €</td><td>0,20 €</td><td>9,80 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="sports" style="display:flex;flex-direction:column">
+    <h2 style="margin:0;background:var(--color-text);color:var(--color-bg);padding:var(--space-4);font-family:var(--font-heading);font-weight:800;font-size:24px;line-height:1.15">Les Sports et Marchés Disponibles sur Matchbook</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));border-left:2px solid var(--color-text);background:#fff">
+      <div style="padding:var(--space-3) var(--space-4);border-right:2px solid var(--color-text);border-bottom:1px solid var(--color-divider);font-weight:700">Football</div>
+      <div style="padding:var(--space-3) var(--space-4);border-right:2px solid var(--color-text);border-bottom:1px solid var(--color-divider);font-weight:700">Tennis</div>
+      <div style="padding:var(--space-3) var(--space-4);border-right:2px solid var(--color-text);border-bottom:1px solid var(--color-divider);font-weight:700">Basketball</div>
+      <div style="padding:var(--space-3) var(--space-4);border-right:2px solid var(--color-text);border-bottom:1px solid var(--color-divider);font-weight:700">Cricket</div>
+      <div style="padding:var(--space-3) var(--space-4);border-right:2px solid var(--color-text);border-bottom:1px solid var(--color-divider);font-weight:700">Football américain</div>
+      <div style="padding:var(--space-3) var(--space-4);border-right:2px solid var(--color-text);border-bottom:1px solid var(--color-divider);font-weight:700">Courses hippiques et lévriers</div>
+      <div style="padding:var(--space-3) var(--space-4);border-right:2px solid var(--color-text);border-bottom:1px solid var(--color-divider);font-weight:700">MMA</div>
+      <div style="padding:var(--space-3) var(--space-4);border-right:2px solid var(--color-text);border-bottom:1px solid var(--color-divider);font-weight:700">Golf</div>
+      <div style="padding:var(--space-3) var(--space-4);border-right:2px solid var(--color-text);border-bottom:1px solid var(--color-divider);font-weight:700">Snooker</div>
+      <div style="padding:var(--space-3) var(--space-4);border-right:2px solid var(--color-text);border-bottom:1px solid var(--color-divider);font-weight:700">Fléchettes</div>
+      <div style="padding:var(--space-3) var(--space-4);border-right:2px solid var(--color-text);border-bottom:1px solid var(--color-divider);font-weight:700">Échecs</div>
+      <div style="padding:var(--space-3) var(--space-4);border-right:2px solid var(--color-text);border-bottom:1px solid var(--color-divider);font-weight:700">Autres marchés</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));border:2px solid var(--color-text);border-right:0">
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Autres marchés disponibles</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Selon le calendrier, l’offre peut inclure le rugby, la boxe, le baseball, le hockey ou des marchés spéciaux. Les marchés les plus suivis, comme le football et les courses, concentrent le plus de liquidité.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Paris en direct et Cash Out</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Certains événements restent ouverts pendant le match. Le Cash Out, selon disponibilité, permet de clôturer une position avant la fin pour sécuriser un gain ou limiter une perte.</p></div>
+    </div>
+  </section>
+
+  <section id="inscription" style="display:flex;flex-direction:column">
+    <h2 style="margin:0;background:var(--color-text);color:var(--color-bg);padding:var(--space-4);font-family:var(--font-heading);font-weight:800;font-size:24px;line-height:1.15">Comment S’inscrire sur Matchbook</h2>
+    <ol style="margin:0;padding:0;list-style:none;border:2px solid var(--color-text);border-top:0;background:#fff">
+      <li style="display:grid;grid-template-columns:56px minmax(0,1fr);border-bottom:1px solid var(--color-divider)"><span style="padding:var(--space-4);font-weight:900;font-size:22px;color:var(--color-accent);border-right:2px solid var(--color-text)">01</span><div style="padding:var(--space-4)"><h3 style="margin:0 0 var(--space-1);font-size:17px;font-weight:800">Création d’un compte</h3><p style="margin:0;line-height:1.55">Cliquez sur le bouton d’inscription et remplissez le formulaire en ligne.</p></div></li>
+      <li style="display:grid;grid-template-columns:56px minmax(0,1fr);border-bottom:1px solid var(--color-divider)"><span style="padding:var(--space-4);font-weight:900;font-size:22px;color:var(--color-accent);border-right:2px solid var(--color-text)">02</span><div style="padding:var(--space-4)"><h3 style="margin:0 0 var(--space-1);font-size:17px;font-weight:800">Informations nécessaires</h3><p style="margin:0;line-height:1.55">Nom, date de naissance, adresse, e-mail, numéro de téléphone et devise du compte.</p></div></li>
+      <li style="display:grid;grid-template-columns:56px minmax(0,1fr);border-bottom:1px solid var(--color-divider)"><span style="padding:var(--space-4);font-weight:900;font-size:22px;color:var(--color-accent);border-right:2px solid var(--color-text)">03</span><div style="padding:var(--space-4)"><h3 style="margin:0 0 var(--space-1);font-size:17px;font-weight:800">Vérification du compte</h3><p style="margin:0;line-height:1.55">Une pièce d’identité et un justificatif de domicile peuvent être demandés avant le premier retrait.</p></div></li>
+      <li style="display:grid;grid-template-columns:56px minmax(0,1fr);border-bottom:1px solid var(--color-divider)"><span style="padding:var(--space-4);font-weight:900;font-size:22px;color:var(--color-accent);border-right:2px solid var(--color-text)">04</span><div style="padding:var(--space-4)"><h3 style="margin:0 0 var(--space-1);font-size:17px;font-weight:800">Connexion à Matchbook</h3><p style="margin:0;line-height:1.55">Identifiant et mot de passe, avec authentification à deux facteurs si vous l’activez.</p></div></li>
+      <li style="display:grid;grid-template-columns:56px minmax(0,1fr)"><span style="padding:var(--space-4);font-weight:900;font-size:22px;color:var(--color-accent);border-right:2px solid var(--color-text)">05</span><div style="padding:var(--space-4)"><h3 style="margin:0 0 var(--space-1);font-size:17px;font-weight:800">Étapes après l’inscription</h3><p style="margin:0;line-height:1.55">Définissez vos limites de dépôt, effectuez un premier dépôt et familiarisez-vous avec l’interface avant de placer un pari.</p></div></li>
+    </ol>
+  </section>
+
+  <section id="paiements" style="display:flex;flex-direction:column">
+    <h2 style="margin:0;background:var(--color-text);color:var(--color-bg);padding:var(--space-4);font-family:var(--font-heading);font-weight:800;font-size:24px;line-height:1.15">Dépôts, Retraits et Moyens de Paiement sur Matchbook</h2>
+    <div style="border:2px solid var(--color-text);border-top:0;background:#fff">
+      <div style="display:grid;grid-template-columns:minmax(140px,220px) minmax(0,1fr);border-bottom:1px solid var(--color-divider)"><div style="padding:var(--space-4);font-weight:800;border-right:2px solid var(--color-text)">Méthodes de paiement</div><div style="padding:var(--space-4);line-height:1.55">Cartes bancaires, virements et portefeuilles électroniques, selon le pays de résidence.</div></div>
+      <div style="display:grid;grid-template-columns:minmax(140px,220px) minmax(0,1fr);border-bottom:1px solid var(--color-divider)"><div style="padding:var(--space-4);font-weight:800;border-right:2px solid var(--color-text)">Devises acceptées</div><div style="padding:var(--space-4);line-height:1.55">La devise est choisie à l’ouverture du compte. L’euro et la livre sterling figurent parmi les options courantes.</div></div>
+      <div style="display:grid;grid-template-columns:minmax(140px,220px) minmax(0,1fr);border-bottom:1px solid var(--color-divider)"><div style="padding:var(--space-4);font-weight:800;border-right:2px solid var(--color-text)">Dépôt minimum</div><div style="padding:var(--space-4);line-height:1.55">Le montant minimum dépend de la méthode choisie. Il est affiché sur la page de dépôt.</div></div>
+      <div style="display:grid;grid-template-columns:minmax(140px,220px) minmax(0,1fr);border-bottom:1px solid var(--color-divider)"><div style="padding:var(--space-4);font-weight:800;border-right:2px solid var(--color-text)">Délais de retrait</div><div style="padding:var(--space-4);line-height:1.55">Comptez un délai de traitement interne, puis le délai propre à la banque ou au portefeuille. Un compte vérifié accélère le processus.</div></div>
+      <div style="display:grid;grid-template-columns:minmax(140px,220px) minmax(0,1fr)"><div style="padding:var(--space-4);font-weight:800;border-right:2px solid var(--color-text)">Éventuels frais</div><div style="padding:var(--space-4);line-height:1.55">Certains moyens de paiement ou conversions de devise peuvent entraîner des frais. Vérifiez-les avant chaque transaction.</div></div>
+    </div>
+  </section>
+
+  <section id="presentation" style="display:flex;flex-direction:column">
+    <h2 style="margin:0;background:var(--color-text);color:var(--color-bg);padding:var(--space-4);font-family:var(--font-heading);font-weight:800;font-size:24px;line-height:1.15">Matchbook Betting Exchange : Notre Présentation de la Plateforme</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));border-left:2px solid var(--color-text);border-bottom:2px solid var(--color-text)">
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Historique et positionnement</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Lancé au Royaume-Uni au milieu des années 2000, Matchbook s’adresse surtout aux parieurs réguliers qui cherchent des cotes serrées et des commissions faibles.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Fonctionnement de l’exchange</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Chaque marché affiche les meilleures cotes Back et Lay disponibles avec les montants proposés. Les ordres non appariés restent visibles dans le carnet jusqu’à leur exécution.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Expérience utilisateur</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">L’interface est dense et orientée données : navigation par sport, grilles de cotes et bulletin de pari latéral. Elle demande un temps d’adaptation pour les débutants.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Avantages et caractéristiques</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Commission sur gains nets, possibilité de parier Lay, accès API pour les utilisateurs avancés et bonne liquidité sur les grands championnats et les courses.</p></div>
+    </div>
+  </section>
+
+  <section id="back-lay" style="display:flex;flex-direction:column">
+    <h2 style="margin:0;background:var(--color-text);color:var(--color-bg);padding:var(--space-4);font-family:var(--font-heading);font-weight:800;font-size:24px;line-height:1.15">Paris Back et Lay sur Matchbook : Guide Pratique</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));border-left:2px solid var(--color-text)">
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider);background:var(--color-neutral-200)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Back : parier sur un résultat</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Vous gagnez si le résultat choisi se produit. Gain = mise × (cote − 1), moins la commission.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider);background:var(--color-accent-200)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Lay : parier contre un résultat</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Vous gagnez si le résultat ne se produit pas. Votre risque (responsabilité) = mise × (cote − 1).</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Lecture des cotes</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Les cotes décimales indiquent le retour total pour 1 € misé. Une cote de 2,50 correspond à une probabilité implicite de 40 %.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Mise et gain potentiel</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Le bulletin affiche le gain potentiel en Back et la responsabilité en Lay avant validation. Relisez ces montants avant de confirmer.</p></div>
+    </div>
+    <div style="border:2px solid var(--color-text);background:#fff;padding:var(--space-4);display:flex;flex-direction:column;gap:var(--space-2)">
+      <h3 style="margin:0;font-size:17px;font-weight:800">Exemple concret d’un pari</h3>
+      <p style="margin:0;line-height:1.55;text-wrap:pretty">Un joueur place un Lay de 20 € à 4,00 sur la victoire d’une équipe. Si l’équipe ne gagne pas, il encaisse 20 € (moins la commission). Si elle gagne, il paie 20 € × 3 = 60 € au parieur Back. Avant de valider, il doit donc disposer de 60 € sur son compte.</p>
+    </div>
+  </section>
+
+  <section id="mobile" style="display:flex;flex-direction:column">
+    <h2 style="margin:0;background:var(--color-text);color:var(--color-bg);padding:var(--space-4);font-family:var(--font-heading);font-weight:800;font-size:24px;line-height:1.15">Matchbook sur Mobile</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));border-left:2px solid var(--color-text);border-bottom:2px solid var(--color-text)">
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Smartphone ou tablette</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Le compte est le même sur tous les appareils : solde, paris ouverts et historique sont synchronisés.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Navigateur mobile</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Le site s’adapte aux petits écrans et fonctionne sans installation depuis Safari, Chrome ou un autre navigateur récent.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Fonctionnalités sur mobile</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Paris Back et Lay, paris en direct, Cash Out selon disponibilité, dépôts, retraits et gestion des limites.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Android et iOS</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Des applications existent selon les pays. Leur disponibilité dans les boutiques dépend de la licence locale.</p></div>
+    </div>
+  </section>
+
+  <section id="securite" style="display:flex;flex-direction:column">
+    <h2 style="margin:0;background:var(--color-text);color:var(--color-bg);padding:var(--space-4);font-family:var(--font-heading);font-weight:800;font-size:24px;line-height:1.15">Sécurité et Vérification du Compte Matchbook</h2>
+    <div style="border:2px solid var(--color-text);border-top:0;background:#fff">
+      <div style="display:grid;grid-template-columns:minmax(140px,220px) minmax(0,1fr);border-bottom:1px solid var(--color-divider)"><div style="padding:var(--space-4);font-weight:800;border-right:2px solid var(--color-text)">Vérification d’identité</div><div style="padding:var(--space-4);line-height:1.55">Contrôle KYC : pièce d’identité, justificatif de domicile et, parfois, preuve du moyen de paiement.</div></div>
+      <div style="display:grid;grid-template-columns:minmax(140px,220px) minmax(0,1fr);border-bottom:1px solid var(--color-divider)"><div style="padding:var(--space-4);font-weight:800;border-right:2px solid var(--color-text)">Protection des données</div><div style="padding:var(--space-4);line-height:1.55">Connexions chiffrées et politique de confidentialité encadrant l’usage des données personnelles.</div></div>
+      <div style="display:grid;grid-template-columns:minmax(140px,220px) minmax(0,1fr);border-bottom:1px solid var(--color-divider)"><div style="padding:var(--space-4);font-weight:800;border-right:2px solid var(--color-text)">Sécurité des comptes</div><div style="padding:var(--space-4);line-height:1.55">Mot de passe robuste et authentification à deux facteurs recommandés.</div></div>
+      <div style="display:grid;grid-template-columns:minmax(140px,220px) minmax(0,1fr);border-bottom:1px solid var(--color-divider)"><div style="padding:var(--space-4);font-weight:800;border-right:2px solid var(--color-text)">Règles de conformité</div><div style="padding:var(--space-4);line-height:1.55">Contrôles anti-blanchiment et vérification de l’origine des fonds au-delà de certains montants.</div></div>
+      <div style="display:grid;grid-template-columns:minmax(140px,220px) minmax(0,1fr)"><div style="padding:var(--space-4);font-weight:800;border-right:2px solid var(--color-text)">Restrictions d’accès</div><div style="padding:var(--space-4);line-height:1.55">Accès réservé aux majeurs résidant dans un pays autorisé. Un seul compte par personne.</div></div>
+    </div>
+  </section>
+
+  <section id="bonus" style="display:flex;flex-direction:column">
+    <h2 style="margin:0;background:var(--color-text);color:var(--color-bg);padding:var(--space-4);font-family:var(--font-heading);font-weight:800;font-size:24px;line-height:1.15">Bonus et Promotions Matchbook</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));border-left:2px solid var(--color-text);border-bottom:2px solid var(--color-text)">
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Offres disponibles</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Les exchanges proposent surtout des réductions de commission ou des offres ponctuelles, plutôt que de gros bonus de bienvenue.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Conditions des promotions</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Chaque offre a une période de validité, des marchés éligibles et parfois une cote minimale.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Exigences de mise</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Certaines promotions imposent de miser un montant donné avant de pouvoir retirer les gains associés.</p></div>
+      <div style="padding:var(--space-4);border-right:2px solid var(--color-text);border-top:1px solid var(--color-divider)"><h3 style="margin:0 0 var(--space-2);font-size:17px;font-weight:800">Vérifier les conditions</h3><p style="margin:0;line-height:1.55;text-wrap:pretty">Lisez les conditions générales de l’offre et les termes promotionnels standards avant d’y participer.</p></div>
+    </div>
+  </section>
+
+  <section id="faq" style="display:flex;flex-direction:column">
+    <h2 style="margin:0;background:var(--color-text);color:var(--color-bg);padding:var(--space-4);font-family:var(--font-heading);font-weight:800;font-size:24px;line-height:1.15">FAQ Matchbook Betting Exchange</h2>
+    <div style="border:2px solid var(--color-text);border-top:0;background:#fff">
+      <details style="border-bottom:1px solid var(--color-divider)"><summary style="padding:var(--space-4);font-weight:800;cursor:pointer;list-style:none">Comment fonctionne Matchbook Betting Exchange ?</summary><p style="margin:0;padding:0 var(--space-4) var(--space-4);line-height:1.55">Les parieurs proposent et acceptent des paris entre eux. Matchbook apparie les ordres et prélève une commission sur les gains nets.</p></details>
+      <details style="border-bottom:1px solid var(--color-divider)"><summary style="padding:var(--space-4);font-weight:800;cursor:pointer;list-style:none">Quelle est la différence entre Back et Lay sur Matchbook ?</summary><p style="margin:0;padding:0 var(--space-4) var(--space-4);line-height:1.55">Back : vous pariez qu’un résultat se produira. Lay : vous pariez qu’il ne se produira pas.</p></details>
+      <details style="border-bottom:1px solid var(--color-divider)"><summary style="padding:var(--space-4);font-weight:800;cursor:pointer;list-style:none">Matchbook est-il disponible en France ?</summary><p style="margin:0;padding:0 var(--space-4) var(--space-4);line-height:1.55">L’accès dépend de l’agrément ANJ. Consultez la liste officielle des opérateurs agréés sur le site de l’ANJ.</p></details>
+      <details style="border-bottom:1px solid var(--color-divider)"><summary style="padding:var(--space-4);font-weight:800;cursor:pointer;list-style:none">Comment s’inscrire sur Matchbook ?</summary><p style="margin:0;padding:0 var(--space-4) var(--space-4);line-height:1.55">Remplissez le formulaire d’inscription, confirmez votre e-mail puis vérifiez votre identité.</p></details>
+      <details style="border-bottom:1px solid var(--color-divider)"><summary style="padding:var(--space-4);font-weight:800;cursor:pointer;list-style:none">Quels documents sont nécessaires pour vérifier son compte ?</summary><p style="margin:0;padding:0 var(--space-4) var(--space-4);line-height:1.55">Une pièce d’identité valide, un justificatif de domicile récent et parfois une preuve du moyen de paiement.</p></details>
+      <details style="border-bottom:1px solid var(--color-divider)"><summary style="padding:var(--space-4);font-weight:800;cursor:pointer;list-style:none">Quels moyens de paiement sont disponibles sur Matchbook ?</summary><p style="margin:0;padding:0 var(--space-4) var(--space-4);line-height:1.55">Cartes bancaires, virements et portefeuilles électroniques, selon le pays.</p></details>
+      <details style="border-bottom:1px solid var(--color-divider)"><summary style="padding:var(--space-4);font-weight:800;cursor:pointer;list-style:none">Comment effectuer un retrait sur Matchbook ?</summary><p style="margin:0;padding:0 var(--space-4) var(--space-4);line-height:1.55">Depuis l’espace compte, choisissez « Retrait », la méthode et le montant. Le compte doit être vérifié.</p></details>
+      <details style="border-bottom:1px solid var(--color-divider)"><summary style="padding:var(--space-4);font-weight:800;cursor:pointer;list-style:none">Matchbook propose-t-il des paris en direct ?</summary><p style="margin:0;padding:0 var(--space-4) var(--space-4);line-height:1.55">Oui, sur de nombreux événements, avec Cash Out selon disponibilité.</p></details>
+      <details style="border-bottom:1px solid var(--color-divider)"><summary style="padding:var(--space-4);font-weight:800;cursor:pointer;list-style:none">Peut-on utiliser Matchbook sur mobile ?</summary><p style="margin:0;padding:0 var(--space-4) var(--space-4);line-height:1.55">Oui, via le navigateur mobile et, selon les pays, les applications Android et iOS.</p></details>
+      <details><summary style="padding:var(--space-4);font-weight:800;cursor:pointer;list-style:none">Comment contacter le support Matchbook ?</summary><p style="margin:0;padding:0 var(--space-4) var(--space-4);line-height:1.55">Par chat en direct ou par e-mail depuis la rubrique d’aide du site.</p></details>
+    </div>
+  </section>
+
+  <section id="jeu-responsable" style="background:var(--color-accent);color:#fff;padding:var(--space-8) var(--space-6);display:flex;flex-direction:column;gap:var(--space-4)">
+    <h2 style="margin:0;font-family:var(--font-heading);font-weight:900;font-size:clamp(28px,4vw,44px);line-height:1.05">Jeu Responsable avec Matchbook</h2>
+    <p style="margin:0;font-size:18px;line-height:1.5;max-width:640px;text-wrap:pretty">Les paris sportifs sont interdits aux mineurs. Fixez des limites de dépôt et de perte, faites des pauses et ne pariez jamais pour récupérer des pertes. En cas de difficulté, contactez Joueurs Info Service au 09 74 75 13 13 (appel non surtaxé).</p>
+  </section>
+
+</main>
+
+<sc-if value="{{ showRail }}" hint-placeholder-val="{{ true }}">
+<aside style="flex:0 1 260px;position:sticky;top:var(--space-6);display:flex;flex-direction:column;border:2px solid var(--color-text);background:#fff">
+  <div style="background:var(--color-text);color:var(--color-bg);padding:var(--space-3) var(--space-4);font-weight:800">En bref</div>
+  <div style="padding:var(--space-3) var(--space-4);border-bottom:1px solid var(--color-divider)"><div style="font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:700">Type</div><div style="font-weight:800">Bourse de paris</div></div>
+  <div style="padding:var(--space-3) var(--space-4);border-bottom:1px solid var(--color-divider)"><div style="font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:700">Paris</div><div style="font-weight:800">Back et Lay</div></div>
+  <div style="padding:var(--space-3) var(--space-4);border-bottom:1px solid var(--color-divider)"><div style="font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:700">Frais</div><div style="font-weight:800">Commission sur gains nets</div></div>
+  <div style="padding:var(--space-3) var(--space-4);border-bottom:2px solid var(--color-text)"><div style="font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:700">France</div><div style="font-weight:800">Vérifier l’agrément ANJ</div></div>
+  <div style="padding:var(--space-4);display:flex;flex-direction:column;gap:var(--space-2)">
+    <a href="#back-lay" class="btn btn-secondary btn-block" style="text-decoration:none">Guide Back et Lay</a>
+    <a href="#commissions" class="btn btn-ghost btn-block" style="text-decoration:none">Calcul des frais</a>
+  </div>
+</aside>
+</sc-if>
+
+</div>
+
+<footer style="background:var(--color-text);color:var(--color-bg);margin-top:var(--space-8);border-top:2px solid var(--color-accent)">
+  <div style="max-width:1320px;margin:0 auto;padding:var(--space-8) var(--space-6);display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:var(--space-6)">
+    <div style="display:flex;flex-direction:column;gap:var(--space-2)"><div style="font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em">Premiers pas</div><a href="#inscription" style="color:var(--color-bg)">Inscription</a><a href="#securite" style="color:var(--color-bg)">Vérification du compte</a><a href="#paiements" style="color:var(--color-bg)">Dépôts et retraits</a></div>
+    <div style="display:flex;flex-direction:column;gap:var(--space-2)"><div style="font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em">Exchange</div><a href="#fonctionnement" style="color:var(--color-bg)">Fonctionnement</a><a href="#back-lay" style="color:var(--color-bg)">Back et Lay</a><a href="#commissions" style="color:var(--color-bg)">Commissions</a></div>
+    <div style="display:flex;flex-direction:column;gap:var(--space-2)"><div style="font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em">Aide</div><a href="#faq" style="color:var(--color-bg)">FAQ</a><a href="#mobile" style="color:var(--color-bg)">Mobile</a><a href="#bonus" style="color:var(--color-bg)">Promotions</a></div>
+    <div style="display:flex;flex-direction:column;gap:var(--space-2)"><div style="font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em">Jeu responsable</div><p style="margin:0;font-size:14px;line-height:1.5">18+ · Jouer comporte des risques : endettement, isolement, dépendance. 09 74 75 13 13.</p></div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showToc&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;showRail&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;showMarket&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showToc: this.props.showToc ?? true,
+      showRail: this.props.showRail ?? true,
+      showMarket: this.props.showMarket ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>
